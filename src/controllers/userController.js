@@ -76,7 +76,6 @@ export const login = async (req, res) => {
     // Generar token JWT
     const token = generateToken(user.id, user.email);
 
-    // No devolver la contraseña
     const { password: _, ...userWithoutPassword } = user;
 
     return res.json({
